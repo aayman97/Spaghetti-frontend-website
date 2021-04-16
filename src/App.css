@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+.app {
+ width : 100%;
+ height : 100vh;
+ display: flex;
+ flex-direction: column;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding : 10px 20px
+}
+.rightSideContainer{
+display : flex;
+flex-direction: row;
+align-items: center;
+justify-content: flex-end;
+}
+.navbar h1{
+  font-family: GiloryBold, serif;
+  padding-left:10px;
+  font-weight: bolder;
+  color: #1d0a08;
+  font-size: 20px;
+}
+.rightSideContainer img{
+  width : 4%;
+  height : 4%;
+  position: relative;
+  padding-right: 20px;
+}
+.rightSideContainer ul{
+  display : flex;
+}
+.rightSideContainer li,a{
+  list-style: none;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: Gilory, sans-serif;
+  color: #1d0a08;
+}
+.rightSideContainer li{
+  padding-right: 60px;
+}
+.spaghettiSection{
+  height : 75%;
+  display : flex;
+  
+}
+.leftside{
+width : 50%;
+padding : 0px 10px;
+}
+.rigthside{
+width : 50%;
+display : flex;
+align-items: center;
+justify-content:center;
+}
+.spaghetti{
+  width:80%;
+  position: relative;
+  top : 40px;
+ z-index: 0;
+ left : 40px
+}
+.leftside h1{
+  font-family: GiloryBold, serif;
+  font-size: 900%;
+  padding-left: 20px;
+  position : relative;
+  z-index: 100;
+  color: #1d0a08;
+}
+.leftside p{
+  font-family: Gilory;
+  padding: 0px 10px;
+  font-size:150%;
+  width : 75%;
+  bottom: 12%;
+  padding-left: 30px;
+  letter-spacing: 1px;
+  color: #1d0a08;
+  position: relative;
+}
+.leftside button{
+  background-color: #1d0a08; 
+  font-family: GiloryBold;
+  border: none;
+  border-radius: 10px;
   color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 4%;
+  bottom: 10%;
+  position: relative;
+  cursor: pointer;
+}
+.socialContainer{
+  width : 10%;
+  height : 5%;
+  align-self: center;
+  position: relative;
+  top : 8%;
+  display : flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.socialmedialogo{
+  width : 10%;
+  height : 70%;
+  object-fit: contain;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
