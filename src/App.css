@@ -3,12 +3,14 @@
  height : 100vh;
  display: flex;
  flex-direction: column;
+ overflow : hidden;
 }
 .navbar{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding : 10px 20px
+  padding : 10px 20px;
+  /* background : red; */
 }
 .rightSideContainer{
 display : flex;
@@ -28,6 +30,7 @@ justify-content: flex-end;
   height : 4%;
   position: relative;
   padding-right: 20px;
+  display : none
 }
 .rightSideContainer ul{
   display : flex;
@@ -45,7 +48,7 @@ justify-content: flex-end;
 .spaghettiSection{
   height : 75%;
   display : flex;
-  
+  /* background: blue; */
 }
 .leftside{
 width : 50%;
@@ -62,11 +65,11 @@ justify-content:center;
   position: relative;
   top : 40px;
  z-index: 0;
- left : 40px
+ left : 10px
 }
 .leftside h1{
   font-family: GiloryBold, serif;
-  font-size: 900%;
+  font-size: 700%;
   padding-left: 20px;
   position : relative;
   z-index: 100;
@@ -114,4 +117,169 @@ justify-content:center;
   height : 70%;
   object-fit: contain;
 }
-
+@media screen and (max-width :720px ){
+  .app {
+    width : 100%;
+    height : 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow : hidden;
+   }
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 10px 10px;
+  }
+  .rightSideContainer{
+  display : flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  }
+  .navbar h1{
+    font-family: GiloryBold, serif;
+    padding-left:10px;
+    font-weight: bolder;
+    color: #1d0a08;
+    font-size: 20px;
+    
+  }
+  .rightSideContainer img{
+    width : 10%;
+    height : 10%;
+    position: relative;
+    padding-right: 10px;
+    align-self: flex-end;
+    display : block
+  }
+  .rightSideContainer nav,ul{
+    display : flex;
+    flex-direction:column;
+     width : 50%;
+     right : 0%;
+    /* padding : 0px -20px; */
+    height : 100%;
+  }
+  .navnav{
+    width : 0px;
+    right : 0%;
+    height : 100%;
+    transform : translateY(-25px) ;
+    position: fixed;
+    background : #1d0a08;
+    /* border-radius: 10px; */
+    border-top-left-radius: 10px ;
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
+    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    padding : 10px 0px;
+    display : none;
+  }
+  .rightSideContainer li{
+    padding-top: 20px;
+    transform : translateY(30px);
+  }
+  .rightSideContainer li,a{
+    list-style: none;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: GiloryBold, sans-serif;
+    color: white;
+  }
+  .rightSideContainer li{
+    padding-right: 60px;
+  }
+  .spaghettiSection{
+    height : 800px;
+    width : 100%;    
+    display : flex;  
+    flex-direction:column-reverse;
+    align-items: center;
+    z-index: -1;
+  }
+  .leftside{
+  width : 100%;
+  padding : 0px 10px;
+  display : flex;
+  flex-direction: column;
+  align-items: center ;
+  z-index: -1;
+   height : 50%;
+  justify-content:space-around;
+  position: relative;
+  margin-bottom: 30px;
+  }
+  .rigthside{
+  width: 90%;
+  display : flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-items: center;
+  height : 20%;
+  z-index : -1;
+  position: relative;
+  }
+  .spaghetti{
+    width:75%;
+    position: relative;
+    top : -20px;
+    z-index: -1;
+    margin-left : 50%;
+    margin-right: 15%;
+  }
+  .leftside h1{
+    font-family: GiloryBold, serif;
+    font-size: 450%;
+    position : relative;
+    color: #1d0a08;
+    z-index : -1;
+    padding-left: 5px;
+    margin-top: 90px;
+  }
+  .leftside p{
+    font-family: Gilory;
+    padding: 0px 10px;
+    font-size:100%;
+    width : 90%;
+    bottom: 12%;
+    padding-left: 30px;
+    letter-spacing: 1px;
+    color: #1d0a08;
+    position: relative;
+  }
+  .leftside button{
+    background-color: #1d0a08; 
+    font-family: GiloryBold;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 0%;
+    bottom: 10%;
+    position: relative;
+    cursor: pointer;
+  }
+  .socialContainer{
+    width : 40%;
+    height : 20%;
+    align-self: center;
+    position: relative;
+    top : 0%;
+    display : flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 79px;
+    z-index: -1;
+  }
+  .socialmedialogo{
+    width : 10%;
+    height : 100%;
+    object-fit: contain;
+    padding-bottom: 40px;
+  }
+}

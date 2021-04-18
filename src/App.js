@@ -11,8 +11,8 @@ function App() {
     <div className="app">
         <div className="navbar">
           <h1>Foodies</h1>
-          <div className="rightSideContainer">
-          <nav>
+          <div className="rightSideContainer" >
+          <nav className="navnav" id="menubar">
             <ul>
               <li><a href="#">Home</a></li>
               <li><a href="#">About</a></li>
@@ -20,15 +20,24 @@ function App() {
               <li><a href="#">Contact</a></li>
             </ul>
           </nav>
-          <img src={menu} className="menuLogo"></img>
+          <img src={menu} className="menuLogo" id="menu" onClick={()=>{
+            // console.log(window.screen.width)
+            console.log(document.getElementById('menubar').offsetWidth)
+            if(document.getElementById('menubar').offsetWidth === 200){
+              document.getElementById("menubar").style.width="0px"
+            }
+            else{
+              document.getElementById("menubar").style.width="200px"
+            }
+            
+          }}></img>
           </div>
         </div>
 
         <div className="spaghettiSection">
           <div className="leftside">
               <h1>Spaghetti</h1>
-              <p>Spaghetti and meatballs or Spaghetti with meatballs ia an italian
-                -American dish consisting of spaghetti, tomato sauce and meatballs
+              <p>Spaghetti and meatballs or Spaghetti with meatballs ia an Italian American dish consisting of spaghetti, tomato sauce and meatballs
               </p>
               <button>Order your food</button>
           </div>
